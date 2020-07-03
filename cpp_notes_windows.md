@@ -9,14 +9,14 @@ std::cout << typeid(randomVar).name() << std::endl; // Prints unsigned int
 //For every character in myName surround the character with brackets
 for ( char x : myName )
 {	
-std::cout << "[" << c << "]" << std::endl; 
+	std::cout << "[" << c << "]" << std::endl; 
 }
 ```
 
 ## control flow with jump
 
 ```c++
-int n = 11;
+	int n = 11;
 myLabel:
 	--n;
 	cout << n << endl;
