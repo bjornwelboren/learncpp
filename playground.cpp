@@ -1,7 +1,9 @@
 #include <iostream>
 #include <string>
+#include "concol.h"
 
 using namespace std;
+using namespace eku;
 
 void say(string);
 void vsay(int);
@@ -21,26 +23,33 @@ T randomFunc(T a) {
 
 
 int main() {
-
+	concolinit();
 	vsay(1);
-
 	//Note that y is not hidden in the inner block, and thus accessing y still accesses the outer variable.
-
 	{
+		settextcolor(red);
 		int x = 1;
 		int y = 0;
-		cout << x << endl;
+		cout << "\nOuter scope x = " << x << endl;
+		cout << "y = " << y << endl;
+		cout << "End of outer scope\n\n";
 		{
+			settextcolor(white);
 			int x = 2;
 			y = 6;
-			cout << x << endl;
-
+			cout << "Inner scope x = " << x << endl;
+			cout << "Changing outer scope variable y to 6 inside the inner scope." << endl;
+			cout << "End of inner scope\n\n";
 			{
+				settextcolor(blue);
 				int x = 3;
-				cout << x << endl;
+				cout << "Nested Inner scope x = " << x << endl;
+				cout << "End of nested inner scope\n\n";
+
 			}
 		}
-		cout << y << endl; // Did the inner scope change the value of the outer scope variable?
+		settextcolor(red);
+		cout << "Printing outer scope y = " << y << endl; // Did the inner scope change the value of the outer scope variable?
 	}
 
 	if (are_equal<int, int>(10, 10)) {
@@ -52,8 +61,6 @@ int main() {
 
 	//                 T,   c,  a
 	cout << randomFunc<int, 20>(30) << endl;
-
-
 
 	return 0;
 
