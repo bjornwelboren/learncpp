@@ -5,18 +5,16 @@ void methodOne();
 void methodTwo();
 
 int main(){
-  testMethodOne();
+  shortWay();
 }
 
-void testMethodOne(){
-  //Short version
+void shortWay(){
   int a;
   int ptr (*(&a) = 10); 
   cout << a;
 }
 
-void testMethodTwo(){
-  //Fully written
+void longWay(){
   int a;
   int * ptr;
   ptr = &a;
