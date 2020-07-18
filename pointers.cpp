@@ -1,8 +1,8 @@
 #include <iostream>
 using namespace std;
 
-void methodOne();
-void methodTwo();
+void shortWay();
+void longWay();
 
 int main(){
   shortWay();
