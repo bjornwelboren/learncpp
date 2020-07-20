@@ -50,5 +50,15 @@ void fillPtrArray(){
 	for ( int elem : array ) {
 		cout << elem << endl;	
 	}
+}
+	
+void forLoopFill(){
+     int array[3];
+     int * p;
+     for ( int i = 0; i < 3; ++i){
+         p = array + i;
+         *p = 6;
+         cout << array[i] << endl;
+     }	
 	
 }
