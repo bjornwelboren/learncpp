@@ -25,11 +25,15 @@ void printarray(int arg[], int length) {
 }
 
 void ptrArray(){
-      int array[1];
+      int array[3];
       int * p;
       cout << array << endl;
       p = array;
-      *p = 666;
+      *p = 6;
+      ++p;
+      *p = 6;
+      ++p;
+      *p = 6;
       for ( int elem : array ) 
         cout << elem << endl;
 }
