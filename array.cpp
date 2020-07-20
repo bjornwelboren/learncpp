@@ -37,3 +37,18 @@ void ptrArray(){
       for ( int elem : array ) 
         cout << elem << endl;
 }
+
+void fillPtrArray(){
+	int array[3];
+	int * p;
+	int i = 0;
+	while ( i < 3 ) {
+		p = array + i;
+		*p = 6;
+		++i;
+	}
+	for ( int elem : array ) {
+		cout << elem << endl;	
+	}
+	
+}
