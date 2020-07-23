@@ -3,6 +3,9 @@
 #include "main.h"
 using namespace std;
 
+void incrementArray();
+
+
 int main() {
 
 
@@ -61,4 +64,13 @@ void forLoopFill(){
          cout << array[i] << endl;
      }	
 	
+void incrementArray(){
+    const char * foo = "hello";
+    cout << *foo; //h
+    ++foo;
+    cout << *foo; //e
+    ++foo;
+    cout << *foo; //l
+    ++foo;
+    cout << *foo; //l	
 }
