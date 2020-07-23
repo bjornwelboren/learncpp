@@ -63,7 +63,8 @@ void forLoopFill(){
          *p = 6;
          cout << array[i] << endl;
      }	
-	
+}
+
 void incrementArray(){
     const char * foo = "hello";
     cout << *foo; //h
