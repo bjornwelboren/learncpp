@@ -72,6 +72,6 @@ void incrementArray(){
     cout << *foo; //e
     ++foo;
     cout << *foo; //l
-    ++foo;
-    cout << *foo; //l	
+    cout << *(foo+1) << endl; //l
+	
 }
