@@ -11,9 +11,14 @@ void increase(void* data, int psize){
 
 
 int main(){
-    char a = 'a';
-    increase(&a, sizeof(a));
-    cout << a << endl;
+    char x = 'a';
+    char * p = &x;
+    ++(*p);
+    cout << a;
+    
+    char y = 'a';
+    increase(&y, sizeof(y));
+    cout << y << endl;
     return 0;
     
 }
