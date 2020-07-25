@@ -18,7 +18,9 @@ int operation(int a, int b, int (*functocall)(int, int)){
 
 int main(){
     int a, b;
-    a = operation(10,5, subtraction); 
+    int (*minus)(int,int) = subtraction;
+    
+    a = operation(10,5, minus); 
     b = operation(10,5, addition); 
     cout << a << endl << b << endl;
     
