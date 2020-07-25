@@ -2,6 +2,7 @@
 using namespace std;
 
 int main(){
+  // Pointing to random memory will not cause an error, dereferencing will
   
   int * p; // uninitialised pointer
   
