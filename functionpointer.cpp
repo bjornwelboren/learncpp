@@ -9,8 +9,8 @@ int operation(int a, int b, int(*functocall)(int,int)){
 };
 
 int main(){
-  int a;
+  	int a;
 	int(*minus)(int,int) = subtraction;
-  a = operation(999,333, minus);
+  	a = operation(999,333, minus);
 	cout << a;
 }
