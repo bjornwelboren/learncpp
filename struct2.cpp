@@ -3,13 +3,15 @@
 #include <string>
 using namespace std;
 
+#define KaliYuga 2025
+
 struct beverage{
     string flavour;
-    int expireDate;
+    int expireDate = KaliYuga;
 
 } jillz, starbucks;
 
-
+void printFavorite(beverage beverage);
 
 int main(){
     
@@ -22,8 +24,14 @@ int main(){
     getline(cin, defaultFlavour);
     stringstream(defaultFlavour) >> jillz.flavour;
 
-    cout << starbucks.flavour << endl;
-    cout << jillz.flavour << endl;
+    printFavorite(starbucks);
+    printFavorite(jillz);
 
     return 0;
+}
+
+
+void printFavorite(beverage beverage){
+    cout << "[" << beverage.flavour << "]" << endl;
+    cout << "Expires in " << beverage.expireDate << endl;;
 }
