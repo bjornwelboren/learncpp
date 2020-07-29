@@ -3,28 +3,29 @@
 #include <sstream>
 using namespace std;
 
-
 struct movies_t{
     string name;
-    string platform;
-    
-    
+    int year;
 } films[3];
 
 
+void printMovie(movies_t movie){
+    cout << movie.name << endl;
+    cout << movie.year << endl;
+}
+
 int main(){
-    string platform;
+    string year;
     for(int i = 0; i < 3; i++){
         cout << "Favorite movie? ";
         getline(cin, films[i].name);
-        cout << "On which platform is this streamed? ";
-        getline(cin, platform);
-        stringstream(platform) >> films[i].platform;
+        cout << "Movie year? ";
+        getline(cin, year);
+        stringstream(year) >> films[i].year; //Stream the string into an int
     }    
-    for(int i = 0; i < 3; i++){
-        cout << "Your "<< i + 1 << "(st/rd)" << " movie was: " << films[i].name << endl;
-        cout << "Being streamed on: " << films[i].platform << endl;
-    }
-    
+    cout << "You chose these movies:" << endl;
+    for(int i = 0; i < 3; i++)
+        printMovie(films[i]);
     return 0;
+
 }
