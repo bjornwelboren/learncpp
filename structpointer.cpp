@@ -15,6 +15,9 @@ int main(){
     pmovie = &movie;
     cout << "Favorite Movie ? ";
     getline(cin, pmovie->name);
+    //same as (*pmovie).name
+
+    //'*pmovie.name' or '*(pmovie.name)' is not possible because name is not a pointer type
     cout << "Your favorite movie is " << movie.name;
     return 0;
 }
