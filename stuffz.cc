@@ -36,6 +36,8 @@ int main()
     Dummy* dmy = new Dummy; //Standard usage
     auto dmyy = make_unique<Dummy>();//Smart pointer 
     auto dmyyy = make_unique<Dummy[]>(5);
+    shared_ptr<Dummy[]> sharedDummy(new Dummy[5]);
+    cout << "Shared dummy: " << sharedDummy[0].salary << endl; //Uses reference count for multiple owners, when 0 it frees the pointer
     cout << dmyy->salary << endl;
     dmyyy[1].salary = 5;
     cout << dmyyy[1].salary << endl;
