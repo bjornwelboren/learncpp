@@ -10,11 +10,19 @@ public:
     
 };
 
-void mystery(const string* casted){
+void mystery(const string* casted)
+{
     cout << *casted << endl;
 }
 
-int main(){
+void reference(int& i)
+{
+    i++;
+}
+
+
+int main()
+{
     int arraySize = 8;
     int * newArray = new int[3];
     ++(*newArray); //Move in value 
@@ -33,5 +41,8 @@ int main(){
     cout << dmyyy[1].salary << endl;
     string mystring = "Bjorn";
     mystery(&mystring);
-    
+    int myInt = 0;
+    reference(myInt); //myInt + 1, making changes in memory out of the scope of the function
+    cout << myInt << '\n';
+    return 0;   
 }
