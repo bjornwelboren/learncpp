@@ -12,7 +12,9 @@ int main()
 {
     try
     {
-       divideNumbers(4,0);
+       cout << divideNumbers(1332,2) << endl;
+       cout << divideNumbers(4,0) << endl;
+       cout << divideNumbers(6,2) << endl;
     }
     catch(const invalid_argument& exception)
     {
